@@ -13,7 +13,7 @@ public class NeosCompanionBot extends TelegramLongPollingBot {
     private final Map<Long, String> userState = new HashMap<>();
 
     // REPLACE WITH YOUR NUMERIC ID (e.g., "12345678")
-    private final String ADMIN_CHAT_ID = "1928283366";
+    private final String ADMIN_CHAT_ID = System.getenv("ADMIN_ID");
     private final String CHANNEL_URL = "https://t.me/neos_terminal";
 
     @Override
@@ -23,7 +23,7 @@ public class NeosCompanionBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "8937969294:AAGFoKQNAUqqWRXx6dfy5H8U-TExnhQ6sYA";
+        return System.getenv("BOT_TOKEN");
     }
 
     @Override
